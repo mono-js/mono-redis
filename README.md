@@ -52,7 +52,7 @@ The current functions of redis client are using callback function but you can co
 
 ```js
 const { redis } = require('@terrajs/mono-redis')
-const utils = require('@terrajs/mono/utils)
+const utils = require('@terrajs/mono/utils')
 
 await utils.cb(redis.set.bind(redis), 'key', 'value')
 const result = await utils.cb(redis.get.bind(redi))
