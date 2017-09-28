@@ -37,8 +37,8 @@
     "redis": "^2.8.0"
   },
   "devDependencies": {
-    "@terrajs/mono": "^0.4.3",
-    "@terrajs/mono-test-utils": "^1.0.1",
+    "@terrajs/mono": "^0.4.4",
+    "@terrajs/mono-test-utils": "^1.0.4",
     "ava": "^0.22.0",
     "codecov": "^2.3.0",
     "eslint": "^4.7.2",
