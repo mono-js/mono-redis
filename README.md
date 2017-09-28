@@ -48,19 +48,12 @@ redis.get('key', (value) => { console.log(`value is ${value}`)})
 
 ```
 
-The current functions of redis client are using callback function but you can convert it to async function with the mono util
+The current functions of redis client are using callback function but you can convert it to async function with the mono utils
 
 ```js
 const { redis } = require('@terrajs/mono-redis')
-const utils = require('@terrajs/mono/utils')
+const { cb } = require('@terrajs/mono/utils')
 
-await utils.cb(redis.set.bind(redis), 'key', 'value')
-const result = await utils.cb(redis.get.bind(redi))
+await cb(redis.set.bind(redis), 'key', 'value')
+const result = await cb(redis.get.bind(redis))
 ```
-
-With [TypeScript](https://github.com/Microsoft/TypeScript):
-
-```ts
-import { redis } from '@terrajs/mono-redis'
-```
-
