@@ -1,6 +1,6 @@
-# mono-redis
+<h1 align="center"><img src="https://user-images.githubusercontent.com/904724/31045532-0e1168a8-a5e6-11e7-8f56-543fe4613e02.png" width="350" alt="Mono"/></h1>
 
-Redis module for [Mono](https://github.com/terrajs/mono).
+> Redis module for [Mono](https://github.com/terrajs/mono)
 
 [![npm version](https://img.shields.io/npm/v/@terrajs/mono-redis.svg)](https://www.npmjs.com/package/@terrajs/mono-redis)
 [![Travis](https://img.shields.io/travis/terrajs/mono-redis/master.svg)](https://travis-ci.org/terrajs/mono-redis)
