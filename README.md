@@ -1,4 +1,4 @@
-<h1 align="center"><img src="https://user-images.githubusercontent.com/904724/31045532-0e1168a8-a5e6-11e7-8f56-543fe4613e02.png" width="350" alt="Mono"/></h1>
+<h1 align="center"><img src="https://user-images.githubusercontent.com/904724/31045670-0b96f158-a5e9-11e7-82ab-e59af67ceef5.png" width="350" alt="Mono"/></h1>
 
 > Redis module for [Mono](https://github.com/terrajs/mono)
 
