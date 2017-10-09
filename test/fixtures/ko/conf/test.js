@@ -1,5 +1,7 @@
 module.exports = {
-	redis: {
-		port: 8047
+	mono: {
+		redis: {
+			port: 8047
+		}
 	}
 }

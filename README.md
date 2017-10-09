@@ -29,9 +29,11 @@ Mono-Redis will use the `redis` property of your configuration (example: `conf/d
 
 ```js
 module.exports = {
-  redis: {
-    port: 8047,
-    // See https://github.com/NodeRedis/node_redis#options-object-properties for more argument
+  mono: {
+    redis: {
+      port: 8047,
+      // See https://github.com/NodeRedis/node_redis#options-object-properties for more argument
+    }
   }
 }
 ```
