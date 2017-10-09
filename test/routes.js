@@ -46,6 +46,6 @@ test('$delete', async (t) => {
 	t.deepEqual(body, { ok: true })
 })
 
-test.after('Close mono server', async (t) => {
+test.after('Close mono server', async () => {
 	await stop(ctx.server)
 })

@@ -21,7 +21,8 @@ test('Start mono on fixture/ok/ should log a connection established', async (t) 
 })
 
 test('Start mono on fixture/ko/ should log a Redis connection error', async (t) => {
-	const error = await t.throws(start(join(__dirname, 'fixtures/ko/')))
+	const error = await t.throws(start(join(__dirname, 'fixtures/ko/')), Error)
 
 	t.true(error.stderr.join().includes('[@terrajs/mono-redis:mono-redis] Could not connect to Redis server'))
+	t.true(error.message.includes('Redis connection to 127.0.0.1:8047 failed'))
 })
