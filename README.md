@@ -2,7 +2,7 @@
 
 > Redis module for [Mono](https://github.com/terrajs/mono)
 
-[![npm version](https://img.shields.io/npm/v/@terrajs/mono-redis.svg)](https://www.npmjs.com/package/@terrajs/mono-redis)
+[![npm version](https://img.shields.io/npm/v/mono-redis.svg)](https://www.npmjs.com/package/mono-redis)
 [![Travis](https://img.shields.io/travis/terrajs/mono-redis/master.svg)](https://travis-ci.org/terrajs/mono-redis)
 [![Coverage](https://img.shields.io/codecov/c/github/terrajs/mono-redis/master.svg)](https://codecov.io/gh/terrajs/mono-redis.js)
 [![license](https://img.shields.io/github/license/terrajs/mono-redis.svg)](https://github.com/terrajs/mono-redis/blob/master/LICENSE)
@@ -10,7 +10,7 @@
 ## Installation
 
 ```bash
-npm install --save @terrajs/mono-redis
+npm install --save mono-redis
 ```
 
 Then, in your configuration file of your Mono application (example: `conf/application.js`):
@@ -18,7 +18,7 @@ Then, in your configuration file of your Mono application (example: `conf/applic
 ```js
 module.exports = {
   mono: {
-    modules: ['@terrajs/mono-redis']
+    modules: ['mono-redis']
   }
 }
 ```
@@ -43,7 +43,7 @@ module.exports = {
 In your modules files, you can access `redis` instance like this:
 
 ```js
-const { redis } = require('@terrajs/mono-redis')
+const { redis } = require('mono-redis')
 
 redis.set('key', 'value', () => { console.log('value setted') })
 redis.get('key', (value) => { console.log(`value is ${value}`)})
@@ -53,7 +53,7 @@ redis.get('key', (value) => { console.log(`value is ${value}`)})
 The current functions of redis client are using callback function but you can convert it to async function with the mono utils
 
 ```js
-const { redis } = require('@terrajs/mono-redis')
+const { redis } = require('mono-redis')
 const { cb } = require('@terrajs/mono/utils')
 
 await cb(redis.set.bind(redis), 'key', 'value')
