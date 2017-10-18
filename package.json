@@ -1,5 +1,5 @@
 {
-  "name": "@terrajs/mono-redis",
+  "name": "mono-redis",
   "version": "1.0.0",
   "description": "Redis module for Mono",
   "main": "lib/",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@terrajs/mono": "^0.4.4",
-    "@terrajs/mono-test-utils": "^1.0.4",
+    "mono-test-utils": "^1.0.4",
     "ava": "^0.22.0",
     "codecov": "^2.3.0",
     "eslint": "^4.7.2",

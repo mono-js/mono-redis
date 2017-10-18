@@ -4,7 +4,7 @@ const { join } = require('path')
 const redisModule = require('../')
 
 const { cb } = require('@terrajs/mono/utils')
-const { start, stop, $put, $get, $delete } = require('@terrajs/mono-test-utils')
+const { start, stop, $put, $get, $delete } = require('mono-test-utils')
 
 let ctx
 
