@@ -23,10 +23,6 @@ test.only('Start mono on fixture/ok/ should log a connection established', async
 test('Start mono on fixture/ko/ should log a Redis connection error', async (t) => {
 	const error = await t.throws(start(join(__dirname, 'fixtures/ko/')), Error)
 
-<<<<<<< HEAD
 	t.true(error.stderr.join().includes('[mono-redis:mono-redis] Could not connect to Redis server'))
-=======
-	t.true(error.stderr.join().includes('mono-redis:mono-redis] Could not connect to Redis server'))
->>>>>>> Remove @terrajs orga and upgrade to mono (6.0.0)
 	t.true(error.message.includes('Redis connection to 127.0.0.1:8047 failed'))
 })
