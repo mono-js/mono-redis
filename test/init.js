@@ -10,7 +10,7 @@ test('Redis should be undefined when connection not opened', (t) => {
 	t.true(typeof redisModule.redis === 'undefined')
 })
 
-test('Start mono on fixture/ok/ should log a connection established', async (t) => {
+test.only('Start mono on fixture/ok/ should log a connection established', async (t) => {
 	let ctx = await start(join(__dirname, 'fixtures/ok/'))
 
 	t.true(ctx.stdout.join().includes('[mono-redis:mono-redis] Opening Redis connection...'))
@@ -23,6 +23,10 @@ test('Start mono on fixture/ok/ should log a connection established', async (t) 
 test('Start mono on fixture/ko/ should log a Redis connection error', async (t) => {
 	const error = await t.throws(start(join(__dirname, 'fixtures/ko/')), Error)
 
+<<<<<<< HEAD
 	t.true(error.stderr.join().includes('[mono-redis:mono-redis] Could not connect to Redis server'))
+=======
+	t.true(error.stderr.join().includes('mono-redis:mono-redis] Could not connect to Redis server'))
+>>>>>>> Remove @terrajs orga and upgrade to mono (6.0.0)
 	t.true(error.message.includes('Redis connection to 127.0.0.1:8047 failed'))
 })
