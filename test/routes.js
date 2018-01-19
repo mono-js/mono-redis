@@ -46,6 +46,29 @@ test('$delete', async (t) => {
 	t.deepEqual(body, { ok: true })
 })
 
+test('$put an object', async (t) => {
+	const { body } = await $put('/redis/hello', {
+		body: {
+			value: JSON.stringify({ hello: 'world' })
+		}
+	})
+
+	t.is(body.hello, 'world')
+})
+
+test('$get an object', async (t) => {
+	const { body } = await $get('/redis/hello')
+
+	t.is(body.hello, 'world')
+})
+
+test('$delete an object', async (t) => {
+	const { body } = await $delete('/redis/hello')
+
+	t.deepEqual(body, { ok: true })
+})
+
+
 test.after('Close mono server', async () => {
 	await stop(ctx.server)
 })
