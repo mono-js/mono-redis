@@ -9,11 +9,11 @@ module.exports = [
 		path: '/redis/:key',
 		async handler(req, res) {
 			// We check if the :key exist from redis
-			const exists = await cb(redis.exists.bind(redis), req.params.key)
+			const exists = await redis.exists(req.params.key)
 			// We throw an error if the key is not found
 			if (!exists) throw new HttpError('key-not-found', 404)
 			// We get the data from redis
-			const value = await cb(redis.get.bind(redis), req.params.key)
+			const value = await redis.get(req.params.key)
 			// We send back the response
 			res.send(value)
 		}
@@ -23,7 +23,7 @@ module.exports = [
 		path: '/redis/:key',
 		async handler(req, res) {
 			// We set the value from body.value to redis as :key
-			await cb(redis.set.bind(redis), req.params.key, req.body.value)
+			await redis.set(req.params.key, req.body.value)
 			// We send back the response
 			res.send(req.body.value)
 		}
@@ -33,7 +33,7 @@ module.exports = [
 		path: '/redis/:key',
 		async handler(req, res) {
 			// We check if the :key exist
-			const exists = await cb(redis.exists.bind(redis), req.params.key)
+			const exists = await redis.exists(req.params.key)
 			// We throw an error if the key is not found
 			if (!exists) throw new HttpError('key-not-found', 404)
 			// We delete the value from :key

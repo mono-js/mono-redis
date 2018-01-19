@@ -32,7 +32,7 @@ module.exports = {
   mono: {
     redis: {
       port: 8047,
-      // See https://github.com/NodeRedis/node_redis#options-object-properties for more argument
+      // See [options] of https://github.com/luin/ioredis/blob/master/API.md#new-redisport-host-options
     }
   }
 }
@@ -45,17 +45,9 @@ In your modules files, you can access `redis` instance like this:
 ```js
 const { redis } = require('mono-redis')
 
-redis.set('key', 'value', () => { console.log('value setted') })
-redis.get('key', (value) => { console.log(`value is ${value}`)})
-
+await redis.set('hello', 'world!')
+const hello = await redis.get('hello')
+// hello = 'world!'
 ```
 
-The current functions of redis client are using callback function but you can convert it to async function with the mono utils
-
-```js
-const { redis } = require('mono-redis')
-const { cb } = require('@terrajs/mono/utils')
-
-await cb(redis.set.bind(redis), 'key', 'value')
-const result = await cb(redis.get.bind(redis))
-```
+We are using [ioredis](https://github.com/luin/ioredis) as a client since it supports async/await promises.
