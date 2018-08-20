@@ -34,15 +34,15 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "ioredis": "^3.2.2"
+    "ioredis": "^4.0.0"
   },
   "devDependencies": {
-    "@terrajs/mono": "0.9.1",
-    "mono-test-utils": "1.2.3",
-    "ava": "0.24.0",
-    "codecov": "3.0.0",
-    "eslint": "4.15.0",
-    "nyc": "11.4.1",
+    "mono-core": "1.0.0",
+    "mono-test-utils": "1.2.4",
+    "ava": "0.25.0",
+    "codecov": "3.0.4",
+    "eslint": "5.4.0",
+    "nyc": "12.0.2",
     "std-mocks": "1.0.1"
   },
   "keywords": [
