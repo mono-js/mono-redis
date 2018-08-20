@@ -1,5 +1,5 @@
-const { HttpError } = require('@terrajs/mono')
-const { cb } = require('@terrajs/mono/utils')
+const { HttpError } = require('mono-core')
+const { cb } = require('mono-utils')
 
 const { redis } = require('../../../..')
 
